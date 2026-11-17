@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a5c30">
+<title>Guud Health Diagnostics & Laboratories | Lekki, Lagos</title>
+<meta name="description" content="24-hour diagnostics and laboratory services in Lekki, Lagos. Book blood tests, scans, screening and more online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#12a150; --gd:#0a5c30; --gm:#0b8a64; --teal:#0aa89e; --mint:#effaf3; --mint2:#dff4e7;
+  --ink:#0f2419; --muted:#5a6f63; --line:#e0eee5; --or:#ff7a1a; --or2:#ff9a45; --red:#e5484d;
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:hidden;padding-bottom:78px}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+section,.hero{scroll-margin-top:70px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px;position:relative}
+.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* ---------- header ---------- */
+.promo{background:var(--gd);color:#d8f5e2;text-align:center;font-size:12.5px;font-weight:600;padding:7px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.promo b{color:#fff}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.logo{width:38px;height:38px;flex:none}
+.brand .t{display:block;font-weight:800;font-size:16.5px;color:var(--gd);letter-spacing:.2px;line-height:1.05;white-space:nowrap}
+.brand .s{display:block;font-weight:600;font-size:9.5px;color:var(--muted);letter-spacing:.7px;white-space:nowrap;text-transform:uppercase;margin-top:2px}
+.links{display:none}
+.menu-btn{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;border:1.5px solid var(--line);background:#fff;font-size:22px;color:var(--gd);cursor:pointer}
+.links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;padding:8px 18px 18px;border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(0,0,0,.08)}
+.links a{padding:13px 4px;font-weight:700;border-bottom:1px solid var(--line);color:var(--ink)}
+.links a.btn{margin-top:14px;border:0;text-align:center;color:#fff}
+@media(min-width:820px){
+  .menu-btn{display:none}
+  .links,.links.open{display:flex;flex-direction:row;align-items:center;gap:26px;position:static;padding:0;box-shadow:none;border:0;background:none}
+  .links a{border:0;padding:0;font-size:14px;color:var(--muted)}
+  .links a:hover{color:var(--gd)}
+  .links a.btn{margin:0;padding:11px 22px;color:#fff}
+}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(135deg,#14b35a,#0a9f6f);color:#fff;font-weight:800;padding:15px 26px;border-radius:14px;border:0;cursor:pointer;font-size:15px;transition:.18s;box-shadow:0 10px 22px rgba(18,161,80,.28)}
+.btn:hover{transform:translateY(-2px)}
+.btn.or{background:linear-gradient(135deg,var(--or2),var(--or));box-shadow:0 12px 26px rgba(255,122,26,.38)}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border:1.5px solid rgba(255,255,255,.55);box-shadow:none}
+.btn.ghost.dark{background:#fff;color:var(--gd);border-color:var(--g)}
+.btn .i{font-size:18px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;padding:40px 0 84px;background:
+  radial-gradient(900px 420px at 85% -10%,rgba(10,168,158,.55),transparent 60%),
+  radial-gradient(700px 380px at -10% 110%,rgba(255,122,26,.18),transparent 60%),
+  linear-gradient(160deg,#094f2a 0%,#0a6b3d 55%,#0b8a64 100%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.09) 1.2px,transparent 1.4px);background-size:22px 22px;opacity:.7;mask-image:linear-gradient(180deg,#000,transparent 85%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.hero .grid{position:relative;display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.hero{padding:70px 0 110px}.hero .grid{grid-template-columns:1.1fr .9fr;gap:50px}}
+.badge{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700}
+.live{width:9px;height:9px;border-radius:50%;background:#5dffa0;box-shadow:0 0 0 0 rgba(93,255,160,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(93,255,160,0)}100%{box-shadow:0 0 0 0 rgba(93,255,160,0)}}
+h1{font-size:clamp(31px,8.4vw,56px);line-height:1.08;margin:16px 0 14px;letter-spacing:-.8px;font-weight:800}
+h1 .hl{color:#9ff0bd}
+.lead{color:#d3efdc;font-size:16px;max-width:520px}
+.cta{display:grid;gap:10px;margin-top:24px}
+@media(min-width:520px){.cta{display:flex;flex-wrap:wrap}}
+.chips-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips-row span{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:#e6fbee;background:rgba(255,255,255,.1);padding:6px 12px;border-radius:999px}
+.chips-row .i{color:#9ff0bd;font-size:14px}
+
+.glass{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:24px;padding:20px;backdrop-filter:blur(8px);box-shadow:0 30px 60px rgba(0,0,0,.2)}
+.g-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.g-top .o{display:flex;align-items:center;gap:8px;font-weight:700;font-size:13px}
+.g-top b{font-size:30px;font-weight:800;letter-spacing:-1px}
+.g-row{display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid rgba(255,255,255,.18)}
+.gi{width:46px;height:46px;border-radius:14px;background:#fff;color:var(--g);display:grid;place-items:center;font-size:23px;flex:none}
+.g-row b{display:block;font-size:15px}
+.g-row small{font-size:12.5px;color:#cdeed8}
+.hero-photo{width:100%;border-radius:26px;display:block;box-shadow:0 30px 60px rgba(0,0,0,.3);aspect-ratio:4/3;object-fit:cover}
+.ecg{position:absolute;left:0;right:0;bottom:30px;height:60px;width:100%;opacity:.55;pointer-events:none}
+.ecg path{fill:none;stroke:#9ff0bd;stroke-width:2.2;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 5s linear infinite;vector-effect:non-scaling-stroke}
+@keyframes draw{to{stroke-dashoffset:0}}
+.curve{position:absolute;bottom:-1px;left:0;width:100%;height:36px;display:block}
+
+/* ---------- marquee ---------- */
+.marquee{background:#fff;border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:13px 0;font-weight:700;font-size:13px;color:var(--gd)}
+.marquee div{display:inline-block;animation:slide 32s linear infinite}
+.marquee span{margin:0 14px}
+.marquee em{color:var(--or);font-style:normal;margin:0 4px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:52px 0}
+@media(min-width:820px){section{padding:84px 0}}
+.eyebrow{display:inline-block;color:var(--g);font-weight:800;font-size:12px;letter-spacing:1.4px;text-transform:uppercase}
+h2{font-size:clamp(25px,6vw,38px);margin:8px 0 8px;letter-spacing:-.5px;font-weight:800;line-height:1.15}
+.sub{color:var(--muted);max-width:560px;font-size:15px}
+.center{text-align:center}.center .sub{margin:0 auto}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px;text-align:left}
+@media(min-width:700px){.cards{grid-template-columns:repeat(4,1fr);gap:16px}}
+.card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:10px;cursor:pointer;transition:.2s;position:relative;text-align:left;font:inherit;color:inherit}
+.card:hover,.card:active{border-color:var(--g);transform:translateY(-3px);box-shadow:0 14px 30px rgba(18,161,80,.14)}
+.ic{width:46px;height:46px;border-radius:14px;background:var(--mint);color:var(--g);display:grid;place-items:center;font-size:23px;transition:.2s}
+.card:hover .ic{background:var(--g);color:#fff}
+.card h3{font-size:14.5px;line-height:1.25;font-weight:700}
+.card p{font-size:12.5px;color:var(--muted);line-height:1.4}
+.card .plus{position:absolute;top:14px;right:14px;width:24px;height:24px;border-radius:50%;background:var(--mint);color:var(--g);display:grid;place-items:center;font-size:14px}
+.card.help{grid-column:1/-1;flex-direction:row;align-items:center;background:linear-gradient(135deg,var(--gd),var(--gm));border:0;color:#fff;gap:14px}
+.card.help .ic{background:rgba(255,255,255,.18);color:#fff}
+.card.help h3{font-size:16px}.card.help p{color:#d3efdc;font-size:13px}
+.card.help .arrow{margin-left:auto;font-size:22px}
+
+/* why */
+.why{background:var(--mint)}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+@media(min-width:820px){.feat{grid-template-columns:repeat(4,1fr);gap:16px}}
+.feat div{background:#fff;border-radius:var(--r);padding:18px;border:1px solid var(--line)}
+.feat .ic{margin-bottom:12px;background:var(--mint2)}
+.feat b{display:block;font-size:15px}
+.feat p{font-size:13px;color:var(--muted);margin-top:3px;line-height:1.45}
+
+/* steps */
+.steps{display:grid;gap:12px;margin-top:26px;text-align:left}
+@media(min-width:820px){.steps{grid-template-columns:repeat(3,1fr);gap:18px}}
+.step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:18px}
+.step .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--g),var(--teal));color:#fff;font-weight:800;font-size:18px;display:grid;place-items:center;flex:none}
+.step b{display:block;font-size:15.5px}
+.step p{font-size:13.5px;color:var(--muted);margin-top:2px}
+
+/* booking */
+#book{background:linear-gradient(180deg,var(--mint) 0%,#fff 100%)}
+.book{display:grid;gap:22px;margin-top:26px;align-items:start}
+@media(min-width:900px){.book{grid-template-columns:.8fr 1.4fr;gap:30px}}
+.side{background:linear-gradient(160deg,var(--gd),var(--gm));color:#fff;border-radius:24px;padding:24px}
+.side h3{font-size:20px;margin-bottom:6px}
+.side p,.side li{font-size:14px;color:#dff6e7}
+.side ul{margin:12px 0 0;list-style:none;display:grid;gap:10px}
+.side li{display:flex;gap:10px}
+.side li .i{color:#9ff0bd;margin-top:3px;font-size:16px}
+.side .call{margin-top:18px;display:flex;align-items:center;justify-content:center;gap:9px;background:#fff;color:var(--gd);border-radius:14px;font-weight:800;padding:13px}
+form,.success{background:#fff;border:1.5px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 18px 44px rgba(10,92,48,.08)}
+fieldset{border:0;margin-bottom:20px}
+legend,label.l{font-weight:700;font-size:14px;margin-bottom:8px;display:block}
+legend{display:flex;align-items:center;gap:9px}
+legend .num{width:24px;height:24px;border-radius:50%;background:var(--g);color:#fff;font-size:12.5px;display:grid;place-items:center;font-weight:800}
+legend small{font-weight:500;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input,.slot input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-block;padding:9px 13px;border:1.5px solid var(--line);border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s;user-select:none;background:#fff}
+.chip input:checked+span{background:var(--g);border-color:var(--g);color:#fff}
+.chip input:focus-visible+span,.slot input:focus-visible+span{outline:3px solid #9fd8b2}
+.row{display:grid;gap:0 14px}
+@media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+.field{margin-bottom:12px}
+input[type=text],input[type=tel],input[type=email],input[type=date],select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:15px;background:#fbfefc;color:var(--ink);-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235a6f63' stroke-width='2'%3E%3Cpath d='m1 1 5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 4px rgba(18,161,80,.15)}
+textarea{min-height:76px;resize:vertical}
+.err{color:var(--red);font-size:12.5px;margin-top:5px;font-weight:600}
+.err:empty{display:none}
+.hint{font-size:12.5px;color:var(--muted);margin-top:8px}
+.tabs{display:flex;gap:6px;margin-bottom:10px;overflow-x:auto;padding-bottom:2px}
+.tab{flex:1;white-space:nowrap;padding:9px 10px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font-size:13px;font-weight:700;color:var(--muted);cursor:pointer}
+.tab.on{background:var(--gd);border-color:var(--gd);color:#fff}
+.slots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+@media(min-width:560px){.slots{grid-template-columns:repeat(4,1fr)}}
+.slot span{display:block;text-align:center;padding:11px 4px;border:1.5px solid var(--line);border-radius:12px;font-size:14px;font-weight:700;cursor:pointer;background:#fff;transition:.15s}
+.slot input:checked+span{background:linear-gradient(135deg,var(--g),var(--teal));color:#fff;border-color:transparent;box-shadow:0 6px 14px rgba(18,161,80,.3)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--muted);margin:4px 0 14px}
+.consent input{margin-top:3px;accent-color:var(--g);width:18px;height:18px;flex:none}
+.submit{width:100%;font-size:16px;padding:16px}
+.submit[disabled]{opacity:.6;cursor:wait}
+.success{display:none;text-align:center}
+.success .tick{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--teal));color:#fff;font-size:34px;display:grid;place-items:center;margin:0 auto 12px;animation:pop .5s cubic-bezier(.2,1.6,.4,1)}
+@keyframes pop{from{transform:scale(0)}}
+.ref{display:inline-block;background:#fff6ec;border:2px dashed var(--or);color:#b34e00;font-weight:800;letter-spacing:3px;padding:10px 20px;border-radius:14px;margin:12px 0;font-size:22px}
+.summary{text-align:left;background:var(--mint);border-radius:16px;padding:14px;margin:12px 0;font-size:14px}
+.summary div{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--line)}
+.summary div:last-child{border:0}
+.summary b{text-align:right}
+.btns{display:grid;gap:10px;margin-top:14px}
+@media(min-width:520px){.btns{display:flex;justify-content:center}}
+.demo{background:#fff8e1;border:1px solid #f3dc8a;color:#7a5b00;padding:10px 14px;border-radius:12px;font-size:12.5px;margin-top:14px;text-align:left}
+
+/* contact */
+.contact{display:grid;gap:10px;margin-top:22px}
+@media(min-width:820px){.contact{grid-template-columns:repeat(4,1fr);gap:16px}}
+.crow{display:flex;gap:14px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:14px 16px;transition:.2s}
+a.crow:hover{border-color:var(--g)}
+.crow b{display:block;font-size:14.5px}
+.crow span.d{font-size:13.5px;color:var(--muted);word-break:break-word}
+.cta-banner{margin-top:34px;background:linear-gradient(135deg,var(--gd),var(--gm));color:#fff;border-radius:26px;padding:28px 22px;display:grid;gap:16px;align-items:center;box-shadow:0 22px 44px rgba(10,92,48,.28)}
+@media(min-width:700px){.cta-banner{grid-template-columns:1fr auto;padding:34px}}
+.cta-banner h3{font-size:clamp(21px,4.6vw,28px);line-height:1.2}
+.cta-banner p{color:#d3efdc;font-size:14px;margin-top:4px}
+footer{background:#071f12;color:#bcd9c6;padding:30px 0;font-size:13.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+/* mobile bottom bar + desktop WhatsApp */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:9px 12px calc(9px + env(safe-area-inset-bottom));display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:8px;box-shadow:0 -10px 26px rgba(0,0,0,.08);transition:transform .25s}
+body.inbook .bar{transform:translateY(120%)}
+.bar a{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 6px;border-radius:12px;font-weight:800;font-size:14px}
+.bar .bc{background:var(--mint);color:var(--gd)}
+.bar .bw{background:#e6f9ee;color:#0f8a43}
+.bar .bb{background:linear-gradient(135deg,var(--or2),var(--or));color:#fff;box-shadow:0 8px 18px rgba(255,122,26,.35)}
+.bar .i{font-size:18px}
+.wa{display:none}
+@media(min-width:820px){
+  body{padding-bottom:0}
+  .bar{display:none}
+  .wa{display:grid;position:fixed;right:20px;bottom:20px;z-index:60;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;place-items:center;font-size:28px;box-shadow:0 12px 26px rgba(0,0,0,.25)}
+}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.31L4 20a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 20l-6-10.69V2"/><path d="M8.5 2h7M7 16h10"/></symbol>
+  <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-phone2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-call" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="promo"><b>Open 24 hours</b> · Book your test online in 1 minute</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Guud Health home">
+      <!-- Placeholder mark: replace with the official logo -->
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14b35a"/><stop offset="1" stop-color="#0aa89e"/></linearGradient></defs><circle cx="20" cy="20" r="19" fill="url(#lg)"/><path d="M20 10v20M10 20h20" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>
+      <span><span class="t">GUUD HEALTH</span><span class="s">Diagnostics &amp; Laboratories</span></span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#why">Why us</a>
+      <a href="#how">How it works</a>
+      <a href="#contact">Find us</a>
+      <a class="btn or" href="#book">Book now</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap grid">
+    <div>
+      <span class="badge"><span class="live"></span> Open 24 hours · Lekki, Lagos</span>
+      <h1>Powering health through <span class="hl">accurate diagnostics</span></h1>
+      <p class="lead">We are dedicated to giving you and your family the best medical healthcare. Lab tests, scans and screening in one trusted place.</p>
+      <div class="cta">
+        <a class="btn or" href="#book"><svg class="i"><use href="#i-cal"/></svg> Book an appointment</a>
+        <a class="btn ghost" href="tel:+2347041047966"><svg class="i"><use href="#i-call"/></svg> 0704 104 7966</a>
+      </div>
+      <div class="chips-row">
+        <span><svg class="i"><use href="#i-clock"/></svg>24/7 service</span>
+        <span><svg class="i"><use href="#i-flask"/></svg>Lab + imaging</span>
+        <span><svg class="i"><use href="#i-users"/></svg>Whole family</span>
+      </div>
+    </div>
+    <div id="heroArt">
+      <div class="glass">
+        <div class="g-top"><span class="o"><span class="live"></span> Open now</span><b>24/7</b></div>
+        <div class="g-row"><span class="gi"><svg class="i"><use href="#i-drop"/></svg></span><div><b>Lab tests</b><small>Blood, urine, stool and more</small></div></div>
+        <div class="g-row"><span class="gi"><svg class="i"><use href="#i-scan"/></svg></span><div><b>Scans &amp; imaging</b><small>Ultrasound and CT scan</small></div></div>
+        <div class="g-row"><span class="gi"><svg class="i"><use href="#i-pulse"/></svg></span><div><b>Health screening</b><small>Diabetes, cholesterol, liver &amp; kidney</small></div></div>
+      </div>
+    </div>
+  </div>
+  <svg class="ecg" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30H260l14 0 12-22 16 46 12-24H560l14 0 12-22 16 46 12-24H860l14 0 12-22 16 46 12-24H1200"/></svg>
+  <svg class="curve" viewBox="0 0 1440 36" preserveAspectRatio="none" aria-hidden="true"><path d="M0 36V14C240 36 480 0 720 14S1200 36 1440 10V36Z" fill="#fff"/></svg>
+</div>
+
+<div class="marquee" aria-hidden="true"><div>
+  <span>Blood, urine &amp; stool tests</span><em>●</em><span>Infectious disease testing</span><em>●</em><span>Hormone &amp; fertility tests</span><em>●</em><span>Diabetes &amp; cholesterol screening</span><em>●</em><span>Liver &amp; kidney function</span><em>●</em><span>Pregnancy screening</span><em>●</em><span>Ultrasound &amp; CT scan</span><em>●</em><span>STI panels</span><em>●</em>
+  <span>Blood, urine &amp; stool tests</span><em>●</em><span>Infectious disease testing</span><em>●</em><span>Hormone &amp; fertility tests</span><em>●</em><span>Diabetes &amp; cholesterol screening</span><em>●</em><span>Liver &amp; kidney function</span><em>●</em><span>Pregnancy screening</span><em>●</em><span>Ultrasound &amp; CT scan</span><em>●</em><span>STI panels</span><em>●</em>
+</div></div>
+
+<section id="services">
+  <div class="wrap center">
+    <span class="eyebrow">Our services</span>
+    <h2>Everything you need, under one roof</h2>
+    <p class="sub">Tap any service to start your booking.</p>
+    <div class="cards">
+      <button type="button" class="card rv" data-svc="Blood, urine & stool tests"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-drop"/></svg></span><h3>Blood, urine &amp; stool tests</h3><p>Routine lab work and check-ups</p></button>
+      <button type="button" class="card rv" data-svc="Infectious disease testing"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><h3>Infectious disease testing</h3><p>Accurate screening for infections</p></button>
+      <button type="button" class="card rv" data-svc="Hormone & fertility tests"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-spark"/></svg></span><h3>Hormone &amp; fertility tests</h3><p>Hormone profiles and fertility checks</p></button>
+      <button type="button" class="card rv" data-svc="Diabetes & cholesterol screening"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-pulse"/></svg></span><h3>Diabetes &amp; cholesterol screening</h3><p>Know your numbers early</p></button>
+      <button type="button" class="card rv" data-svc="Liver & kidney function tests"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-flask"/></svg></span><h3>Liver &amp; kidney function tests</h3><p>See how key organs are working</p></button>
+      <button type="button" class="card rv" data-svc="Pregnancy screening"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-smile"/></svg></span><h3>Pregnancy screening</h3><p>Confirmation and antenatal tests</p></button>
+      <button type="button" class="card rv" data-svc="Ultrasound|CT scan"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-scan"/></svg></span><h3>Ultrasound &amp; CT scan</h3><p>Imaging by trained staff</p></button>
+      <button type="button" class="card rv" data-svc="STI panels"><span class="plus"><svg class="i"><use href="#i-plus"/></svg></span><span class="ic"><svg class="i"><use href="#i-lock"/></svg></span><h3>STI panels</h3><p>Confidential, respectful testing</p></button>
+      <a class="card help rv" href="tel:+2347041047966"><span class="ic"><svg class="i"><use href="#i-call"/></svg></span><div><h3>Not sure what you need?</h3><p>Call us on 0704 104 7966</p></div><svg class="i arrow"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="wrap center">
+    <span class="eyebrow">Why Guud Health</span>
+    <h2>Care that fits your life</h2>
+    <p class="sub">Health doesn't keep office hours, and neither do we.</p>
+    <div class="feat" style="text-align:left">
+      <div class="rv"><span class="ic"><svg class="i"><use href="#i-clock"/></svg></span><b>Open 24 hours</b><p>Walk in or book any time, day or night.</p></div>
+      <div class="rv"><span class="ic"><svg class="i"><use href="#i-target"/></svg></span><b>Accurate results</b><p>Careful testing you and your doctor can rely on.</p></div>
+      <div class="rv"><span class="ic"><svg class="i"><use href="#i-users"/></svg></span><b>For the whole family</b><p>From antenatal care to adult check-ups.</p></div>
+      <div class="rv"><span class="ic"><svg class="i"><use href="#i-phone2"/></svg></span><b>Easy booking</b><p>Pick your tests and time online.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap center">
+    <span class="eyebrow">How it works</span>
+    <h2>Booking takes a minute</h2>
+    <div class="steps">
+      <div class="step rv"><span class="n">1</span><div><b>Pick your tests</b><p>Choose one or more services.</p></div></div>
+      <div class="step rv"><span class="n">2</span><div><b>Choose a date &amp; time</b><p>We are open round the clock.</p></div></div>
+      <div class="step rv"><span class="n">3</span><div><b>Get your reference</b><p>Show it on arrival, or wait for our call.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Book online</span>
+    <h2>Book an appointment today</h2>
+    <p class="sub">Fill in the form and our team will confirm your slot.</p>
+
+    <div class="book">
+      <aside class="side">
+        <h3>Before you come</h3>
+        <p>A few tips for a smooth visit:</p>
+        <ul>
+          <li><svg class="i"><use href="#i-check"/></svg><span>Some tests (like fasting blood sugar) need you to avoid food first. We will tell you when we confirm.</span></li>
+          <li><svg class="i"><use href="#i-check"/></svg><span>Bring any doctor's request or past results.</span></li>
+          <li><svg class="i"><use href="#i-check"/></svg><span>For scans, wear comfortable clothing.</span></li>
+        </ul>
+        <a class="call" href="tel:+2347041047966"><svg class="i"><use href="#i-call"/></svg> Prefer to call? 0704 104 7966</a>
+      </aside>
+
+      <div>
+        <form id="bookingForm" novalidate>
+          <fieldset>
+            <legend><span class="num">1</span>What do you need? <small>(pick one or more)</small></legend>
+            <div class="chips" id="serviceChips"></div>
+            <div class="err" id="errServices"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num">2</span>When would you like to come?</legend>
+            <div class="field">
+              <label class="l" for="date">Date</label>
+              <input type="date" id="date" required>
+              <div class="err" id="errDate"></div>
+            </div>
+            <label class="l">Time of day</label>
+            <div class="tabs" id="tabs"></div>
+            <div class="slots" id="slots"></div>
+            <div class="hint">We are open 24 hours, so any slot works.</div>
+            <div class="err" id="errTime"></div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num">3</span>Your details</legend>
+            <div class="row">
+              <div class="field"><label class="l" for="name">Full name</label><input type="text" id="name" autocomplete="name" required><div class="err" id="errName"></div></div>
+              <div class="field"><label class="l" for="phone">Phone number</label><input type="tel" id="phone" autocomplete="tel" inputmode="tel" placeholder="0801 234 5678" required><div class="err" id="errPhone"></div></div>
+            </div>
+            <div class="row">
+              <div class="field"><label class="l" for="email">Email <small style="font-weight:500;color:var(--muted)">(optional)</small></label><input type="email" id="email" autocomplete="email" inputmode="email"><div class="err" id="errEmail"></div></div>
+              <div class="field"><label class="l" for="gender">Gender <small style="font-weight:500;color:var(--muted)">(optional)</small></label>
+                <select id="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option></select></div>
+            </div>
+            <div class="field"><label class="l" for="notes">Anything we should know? <small style="font-weight:500;color:var(--muted)">(optional)</small></label><textarea id="notes" placeholder="E.g. doctor's request, special needs"></textarea></div>
+          </fieldset>
+
+          <label class="consent"><input type="checkbox" id="consent"><span>I agree that Guud Health may contact me by phone, SMS or email about this booking.</span></label>
+          <div class="err" id="errConsent" style="margin:-8px 0 10px"></div>
+          <button class="btn or submit" type="submit" id="submitBtn">Confirm booking</button>
+        </form>
+
+        <div class="success" id="success" role="status" aria-live="polite">
+          <div class="tick"><svg class="i"><use href="#i-check"/></svg></div>
+          <h3 style="font-size:22px">Booking received!</h3>
+          <p class="sub" style="margin:6px auto 0">Our team will call you shortly to confirm. Keep your reference:</p>
+          <div class="ref" id="refCode"></div>
+          <div class="summary" id="summary"></div>
+          <div class="btns">
+            <a class="btn" id="waBtn" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg> Send on WhatsApp</a>
+            <button class="btn ghost dark" id="newBtn" type="button">Make another booking</button>
+          </div>
+          <div class="demo" id="demoNote" style="display:none"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <span class="eyebrow">Find us</span>
+    <h2>Visit or get in touch</h2>
+    <div class="contact">
+      <a class="crow rv" href="https://www.google.com/maps/search/?api=1&query=Rendezvous+City+Center+Eleganza+Bus+Stop+Lekki+Lagos" target="_blank" rel="noopener"><span class="ic"><svg class="i"><use href="#i-pin"/></svg></span><div><b>Address</b><span class="d">Rendezvous City Center, Eleganza Bus Stop, Lekki, Lagos</span></div></a>
+      <a class="crow rv" href="tel:+2347041047966"><span class="ic"><svg class="i"><use href="#i-call"/></svg></span><div><b>Phone</b><span class="d">0704 104 7966</span></div></a>
+      <a class="crow rv" href="mailto:guudhealthdiagnostics@gmail.com"><span class="ic"><svg class="i"><use href="#i-mail"/></svg></span><div><b>Email</b><span class="d">guudhealthdiagnostics@gmail.com</span></div></a>
+      <div class="crow rv"><span class="ic"><svg class="i"><use href="#i-clock"/></svg></span><div><b>Hours</b><span class="d">Open 24 hours</span></div></div>
+    </div>
+    <div class="cta-banner rv">
+      <div><h3>Your health comes first.</h3><p>Book your test today and we will take it from there.</p></div>
+      <a class="btn or" href="#book">Book an appointment</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="yr"></span> Guud Health Diagnostics &amp; Laboratories</div>
+    <div>Powering health through accurate diagnostics</div>
+  </div>
+</footer>
+
+<!-- mobile bottom bar -->
+<div class="bar">
+  <a class="bc" href="tel:+2347041047966"><svg class="i"><use href="#i-call"/></svg>Call</a>
+  <a class="bw" id="waBar" target="_blank" rel="noopener"><svg class="i"><use href="#i-chat"/></svg>Chat</a>
+  <a class="bb" href="#book"><svg class="i"><use href="#i-cal"/></svg>Book now</a>
+</div>
+<a class="wa" id="waFloat" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="i"><use href="#i-chat"/></svg></a>
+
+<script>
+/* ================= CONFIG: edit these ================= */
+const CONFIG = {
+  // Paste your n8n (or any backend) webhook URL to receive bookings.
+  // Leave empty for demo mode (bookings saved only in this browser).
+  WEBHOOK_URL: "",
+  WHATSAPP_NUMBER: "2347041047966",   // international format, no + or spaces
+  CLINIC_NAME: "Guud Health Diagnostics & Laboratories",
+  // Optional: a photo for the top of the page (file link or data: URL).
+  HERO_PHOTO: ""
+};
+/* ====================================================== */
+
+const SERVICES = [
+  "Blood, urine & stool tests","Infectious disease testing","Hormone & fertility tests",
+  "Diabetes & cholesterol screening","Liver & kidney function tests","Pregnancy screening",
+  "Ultrasound","CT scan","STI panels"
+];
+const $ = id => document.getElementById(id);
+$("yr").textContent = new Date().getFullYear();
+
+/* hero photo (optional) */
+if (CONFIG.HERO_PHOTO) {
+  $("heroArt").innerHTML = '<img class="hero-photo" alt="The Guud Health team" src="' + CONFIG.HERO_PHOTO + '">';
+}
+
+/* mobile menu */
+const menuBtn = $("menuBtn"), navLinks = $("navLinks");
+function setMenu(open){
+  navLinks.classList.toggle("open", open);
+  menuBtn.setAttribute("aria-expanded", open);
+  menuBtn.innerHTML = '<svg class="i"><use href="#' + (open ? "i-x" : "i-menu") + '"/></svg>';
+}
+menuBtn.addEventListener("click", () => setMenu(!navLinks.classList.contains("open")));
+navLinks.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+
+/* scroll reveal */
+const io = "IntersectionObserver" in window
+  ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .05, rootMargin: "0px 0px -20px 0px" })
+  : null;
+document.querySelectorAll(".rv").forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + "ms"; io ? io.observe(el) : el.classList.add("in"); });
+
+/* hide bottom bar while the booking section is on screen */
+if ("IntersectionObserver" in window) {
+  new IntersectionObserver(es => es.forEach(e => document.body.classList.toggle("inbook", e.isIntersecting)), { threshold: .15 }).observe($("book"));
+}
+
+/* whatsapp links */
+const waBase = "https://wa.me/" + CONFIG.WHATSAPP_NUMBER;
+const waHello = waBase + "?text=" + encodeURIComponent("Hello, I'd like to make an enquiry.");
+$("waFloat").href = waHello; $("waBar").href = waHello;
+
+/* service chips */
+$("serviceChips").innerHTML = SERVICES.map(s =>
+  '<label class="chip"><input type="checkbox" name="svc" value="' + s + '"><span>' + s + '</span></label>').join("");
+
+/* tap a service card to pre-select it */
+document.querySelectorAll("[data-svc]").forEach(card => card.addEventListener("click", () => {
+  const wanted = card.dataset.svc.split("|");
+  document.querySelectorAll('input[name=svc]').forEach(cb => { if (wanted.includes(cb.value)) cb.checked = true; });
+  $("errServices").textContent = "";
+  $("book").scrollIntoView({ behavior: "smooth" });
+}));
+
+/* date + time slots */
+const pad = n => String(n).padStart(2, "0");
+const localISO = d => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+const now0 = new Date(), maxD = new Date(); maxD.setDate(maxD.getDate() + 60);
+$("date").min = localISO(now0); $("date").max = localISO(maxD); $("date").value = localISO(now0);
+
+const PERIODS = [
+  { k: "morning",   label: "Morning",   hrs: [6,7,8,9,10,11] },
+  { k: "afternoon", label: "Afternoon", hrs: [12,13,14,15,16] },
+  { k: "evening",   label: "Evening",   hrs: [17,18,19,20] },
+  { k: "night",     label: "Night",     hrs: [21,22,23,0,1,2,3,4,5] }
+];
+let period = "morning", selectedSlot = "";
+const shortH = h => (h % 12 === 0 ? 12 : h % 12) + " " + (h < 12 ? "AM" : "PM");
+const longH  = h => (h % 12 === 0 ? 12 : h % 12) + ":00 " + (h < 12 ? "AM" : "PM");
+function availableHrs(hrs){
+  const isToday = $("date").value === localISO(new Date());
+  const nowH = new Date().getHours();
+  return hrs.filter(h => !(isToday && h <= nowH));
+}
+function pickDefaultPeriod(){
+  const p = PERIODS.find(x => availableHrs(x.hrs).length);
+  period = p ? p.k : "morning";
+  if (selectedSlot && !availableHrs([Number(selectedSlot.slice(0, 2))]).length) selectedSlot = "";
+}
+function renderSlots(){
+  $("tabs").innerHTML = PERIODS.map(x =>
+    '<button type="button" class="tab ' + (x.k === period ? "on" : "") + '" data-k="' + x.k + '">' + x.label + '</button>').join("");
+  const hrs = availableHrs(PERIODS.find(x => x.k === period).hrs);
+  $("slots").innerHTML = hrs.length
+    ? hrs.map(h => '<label class="slot"><input type="radio" name="slot" value="' + pad(h) + ':00"' + (selectedSlot === pad(h) + ":00" ? " checked" : "") + '><span>' + shortH(h) + '</span></label>').join("")
+    : '<div class="hint" style="grid-column:1/-1">No more slots in this period today. Try another time of day.</div>';
+}
+$("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (b) { period = b.dataset.k; renderSlots(); } });
+$("slots").addEventListener("change", e => { if (e.target.name === "slot") { selectedSlot = e.target.value; $("errTime").textContent = ""; } });
+$("date").addEventListener("change", () => { pickDefaultPeriod(); renderSlots(); });
+pickDefaultPeriod(); renderSlots();
+
+/* validation */
+function validate(){
+  let ok = true;
+  const set = (id, msg) => { $(id).textContent = msg; if (msg) ok = false; };
+  set("errServices", document.querySelector('input[name=svc]:checked') ? "" : "Please pick at least one service.");
+  set("errDate", $("date").value ? "" : "Please choose a date.");
+  set("errTime", selectedSlot ? "" : "Please choose a time.");
+  set("errName", $("name").value.trim().length >= 3 ? "" : "Please enter your full name.");
+  const ph = $("phone").value.replace(/[\s\-()]/g, "");
+  set("errPhone", /^(\+?234|0)[789][01]\d{8}$/.test(ph) ? "" : "Enter a valid Nigerian number, e.g. 0801 234 5678.");
+  const em = $("email").value.trim();
+  set("errEmail", !em || /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em) ? "" : "That email doesn't look right.");
+  set("errConsent", $("consent").checked ? "" : "Please tick to continue.");
+  return ok;
+}
+
+function makeRef(){
+  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; let r = "";
+  for (let i = 0; i < 5; i++) r += chars[Math.floor(Math.random() * chars.length)];
+  return "GH-" + r;
+}
+function prettyDate(iso){
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Date(y, m - 1, d).toLocaleDateString("en-NG", { weekday: "short", day: "numeric", month: "short", year: "numeric" });
+}
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+$("bookingForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  if (!validate()) { const first = document.querySelector(".err:not(:empty)"); first && first.scrollIntoView({ block: "center", behavior: "smooth" }); return; }
+
+  const booking = {
+    reference: makeRef(),
+    services: [...document.querySelectorAll('input[name=svc]:checked')].map(x => x.value),
+    date: $("date").value, time: selectedSlot,
+    name: $("name").value.trim(),
+    phone: $("phone").value.replace(/[\s\-()]/g, ""),
+    email: $("email").value.trim(),
+    gender: $("gender").value,
+    notes: $("notes").value.trim(),
+    createdAt: new Date().toISOString(),
+    status: "pending"
+  };
+
+  const btn = $("submitBtn"); btn.disabled = true; btn.textContent = "Sending…";
+  let sent = false;
+  if (CONFIG.WEBHOOK_URL) {
+    try {
+      const res = await fetch(CONFIG.WEBHOOK_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(booking) });
+      if (!res.ok) throw new Error("Server said " + res.status);
+      sent = true;
+    } catch (err) {
+      btn.disabled = false; btn.textContent = "Confirm booking";
+      alert("Sorry, we couldn't send your booking. Please check your internet and try again, or call 0704 104 7966.");
+      return;
+    }
+  }
+  try { const all = JSON.parse(localStorage.getItem("guud_bookings") || "[]"); all.push(booking); localStorage.setItem("guud_bookings", JSON.stringify(all)); } catch (_) {}
+  showSuccess(booking, sent);
+});
+
+function showSuccess(b, sent){
+  $("bookingForm").style.display = "none";
+  $("success").style.display = "block";
+  $("refCode").textContent = b.reference;
+  const h = Number(b.time.slice(0, 2));
+  $("summary").innerHTML =
+    '<div><span>Name</span><b>' + esc(b.name) + '</b></div>' +
+    '<div><span>Date</span><b>' + prettyDate(b.date) + '</b></div>' +
+    '<div><span>Time</span><b>' + longH(h) + '</b></div>' +
+    '<div><span>Services</span><b>' + b.services.map(esc).join(", ") + '</b></div>' +
+    '<div><span>Place</span><b>Rendezvous City Center, Lekki</b></div>';
+  const msg = "Hello " + CONFIG.CLINIC_NAME + ", I just booked online.\nRef: " + b.reference + "\nName: " + b.name + "\nDate: " + prettyDate(b.date) + ", " + longH(h) + "\nServices: " + b.services.join(", ");
+  $("waBtn").href = waBase + "?text=" + encodeURIComponent(msg);
+  if (!sent) {
+    $("demoNote").style.display = "block";
+    $("demoNote").textContent = "Demo mode: no server is connected yet, so this booking is saved only in this browser. Add your webhook URL in the CONFIG section to receive real bookings.";
+  }
+  $("success").scrollIntoView({ block: "start", behavior: "smooth" });
+}
+
+$("newBtn").addEventListener("click", () => {
+  $("bookingForm").reset(); $("bookingForm").style.display = "block"; $("success").style.display = "none";
+  $("date").value = localISO(new Date()); selectedSlot = ""; pickDefaultPeriod(); renderSlots();
+  $("submitBtn").disabled = false; $("submitBtn").textContent = "Confirm booking";
+  document.querySelectorAll(".err").forEach(x => x.textContent = "");
+  $("book").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+</body>
+</html>
